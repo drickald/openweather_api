@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App - Check Your Local Weather</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Theme Toggle -->
+  <div class="theme-toggle">
+    <button class="theme-btn" data-theme="day" title="Day Mode">☀️</button>
+    <button class="theme-btn" data-theme="night" title="Night Mode">🌙</button>
+  </div>
+
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <h1>🌤️ Weather App</h1>
+      <p>Check the weather for any city worldwide</p>
+    </header>
+
+    <!-- Search Section -->
+    <section class="search-section">
+      <div class="search-box">
+        <input 
+          type="text" 
+          id="cityInput" 
+          placeholder="🔍 Enter city name..." 
+          autocomplete="off"
+        >
+        <button id="searchBtn" class="btn-search">Search</button>
+      </div>
+      <p id="error" class="error hidden"></p>
+    </section>
+
+    <!-- Loading Indicator -->
+    <div id="loading" class="loading-spinner hidden">
+      <div class="spinner"></div>
+      <p>Loading weather...</p>
+    </div>
+
+    <!-- Current Weather Result -->
+    <div id="result" class="weather-card hidden">
+      <div class="location-header">
+        <h2 id="cityName"></h2>
+        <p id="weatherDesc"></p>
+      </div>
+
+      <div class="weather-main">
+        <div class="temp-section">
+          <img id="weatherIcon" src="" alt="Weather icon" class="weather-icon">
+          <div class="temp-display">
+            <span id="temperature" class="temp">--°C</span>
+            <span id="feelsLike" class="feels-like">Feels like --°C</span>
+          </div>
+        </div>
+
+        <div class="weather-details">
+          <div class="detail-item">
+            <span class="detail-label">💧 Humidity</span>
+            <span id="humidity" class="detail-value">--%</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">💨 Wind Speed</span>
+            <span id="windSpeed" class="detail-value">-- km/h</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">🔽 Pressure</span>
+            <span id="pressure" class="detail-value">-- hPa</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">👁️ Visibility</span>
+            <span id="visibility" class="detail-value">-- km</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">☁️ Cloudiness</span>
+            <span id="cloudiness" class="detail-value">--%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5-Day Forecast -->
+    <section id="forecastSection" class="forecast-section hidden">
+      <h3>📅 5-Day Forecast</h3>
+      <div id="forecastContainer" class="forecast-grid"></div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Weather App. All rights reserved.</p>
+    <p>Data from <a href="https://openweathermap.org/" target="_blank">OpenWeather API</a></p>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
