@@ -1,2 +1,2 @@
 // API key stored separately for security
-export const API_KEY = "02c6caa7efc15252e81d232a84072d0a";
+export const API_KEY = "YOUR_API_KEY_HERE";
