@@ -44,12 +44,10 @@ Built with **HTML, CSS, and JavaScript**.
 Make sure the API key file is not pushed to GitHub.
 
 📁 Project Structure
-diff
-Copy code
-index.html
-style.css
-script.js
-config.js
+-index.html
+-style.css
+-script.js
+-config.js
 
 ❤️ Credits
 Weather data provided by OpenWeather API
