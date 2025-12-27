@@ -41,7 +41,6 @@ Built with **HTML, CSS, and JavaScript**.
 3. Add your API key:
    ```js
    export const API_KEY = "YOUR_API_KEY_HERE";
-Make sure the API key file is not pushed to GitHub.
 
 📁 Project Structure
 -index.html
